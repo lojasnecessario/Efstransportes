@@ -321,6 +321,47 @@
         </section>
       ));
 
+      const Certifications = memo(() => (
+        <section id="certificacoes" className="py-10 bg-[#2B2D2F] text-white">
+          <div className="container mx-auto px-4 flex flex-col items-center text-center">
+            <h6 className="text-efs-red font-bold uppercase tracking-[0.2em] text-xs mb-2">Segurança e Conformidade</h6>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter italic">
+              Certificações e <span className="text-efs-red">Conformidade</span>
+            </h2>
+            <div className="w-16 h-1 bg-efs-red mb-6"></div>
+            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mb-12">
+              Seguimos rigorosamente as normas dos órgãos reguladores, garantindo segurança, qualidade e responsabilidade em cada operação logística.
+            </p>
+            
+            <div className="w-full max-w-5xl border border-gray-700 rounded-xl p-8 md:p-12 text-left flex flex-col md:flex-row items-center gap-10 bg-[#3c3f41] shadow-2xl">
+              <div className="w-full md:w-1/2 flex flex-col items-start border-b md:border-b-0 md:border-r border-gray-600 pb-8 md:pb-0 md:pr-10">
+                <h6 className="text-efs-red font-bold uppercase tracking-widest text-xs mb-2">Autorização</h6>
+                <h3 className="text-5xl font-black text-white uppercase tracking-tighter mb-2">Anvisa</h3>
+                <h4 className="text-2xl font-bold text-gray-200 mb-6 leading-tight">Transporte de Saneantes<br />e Domissanitários</h4>
+                <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+                  A EFS Transportes e Logística possui autorização da Agência Nacional de Vigilância Sanitária (ANVISA) para o transporte de saneantes e domissanitários, seguindo todas as exigências e normas vigentes.
+                </p>
+                <a 
+                  href={WHATSAPP_LINK} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebc57] text-white font-bold px-6 py-3.5 rounded-md transition-all uppercase text-sm tracking-widest group btn-hover-effect"
+                >
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 fill-white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.267.405 2.436 1.096 3.389l-.72 2.632 2.696-.706a5.736 5.736 0 0 0 2.695.68h.001c3.181 0 5.767-2.586 5.767-5.767 0-3.181-2.586-5.767-5.768-5.767zm3.39 8.201c-.148.42-.756.764-1.04.811-.285.047-.639.068-1.04-.047-.245-.07-.54-.165-.92-.33a4.757 4.757 0 0 1-1.92-1.683c-.38-.495-.662-1.07-.662-1.683 0-1.12.58-1.666.79-1.884.21-.218.463-.273.611-.273s.3.003.43.011c.14.01.32-.037.5.39.19.45.64 1.556.69 1.666.06.11.09.24.02.38-.07.14-.15.24-.25.35-.1.11-.21.24-.3.35-.1.11-.21.24-.3.35-.1.11-.21.23-.09.43.12.2.53.88 1.14 1.43.78.7 1.44.92 1.64 1.03.2.11.31.09.43-.04.12-.13.52-.6.66-.81.14-.21.28-.17.47-.1.19.07 1.2.57 1.4.67.2.11.33.16.38.25.05.09.05.52-.1.94z"/></svg>
+                  Solicitar Cotação
+                  <svg className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </a>
+              </div>
+              <div className="w-full md:w-1/2 flex justify-center items-center">
+                <div className="bg-white p-8 rounded-xl shadow-[0_0_40px_rgba(255,255,255,0.05)] w-full max-w-[320px] aspect-square flex items-center justify-center">
+                  <img src="assets/anvisa.png" alt="ANVISA - Agência Nacional de Vigilância Sanitária" className="w-full h-auto object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ));
+
       const Fleet = memo(() => {
         const [curr, setCurr] = useState(0);
         const fleetImgs = [
@@ -576,6 +617,7 @@
           <Hero />
           <About />
           <Services />
+          <Certifications />
           <Fleet />
           <Atuacao />
           <ContactMiniSection />
